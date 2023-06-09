@@ -7,7 +7,7 @@ mp-weixin
 
 #### 安装依赖
 ```shell
-npm install![img.png](img.png)
+npm install
 ```
 
 #### 启动服务
@@ -16,9 +16,9 @@ npm run serve
 ```
 
 #### 路由访问
-```http request
+```text
 http://localhost:9991/login/check
 ```
-```http request
+```text
 http://localhost:9991/order/list
 ```
