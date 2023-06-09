@@ -2,13 +2,10 @@ import Router from 'koa-router'
 import axios from 'axios'
 import jwt from 'jsonwebtoken'
 import { writeFile } from 'fs'
-import { PRIVATE_KEY } from "../private/index.js";
+import { PRIVATE_KEY, app_id, app_secret } from "../private/index.js";
 
 
 const router = new Router({ prefix: '/login' })
-
-const app_id = 'Replace with your own app_id'
-const app_secret = 'Replace with your own app_secret'
 
 let current_token = ''
 
@@ -41,5 +38,28 @@ router.get('/check', async (ctx, next) => {
         token: token
     }
 })
+
+
+router.get('/phone', async(ctx) => {
+    const { code } = ctx.query
+    console.log(code)
+    const result = await axios.get('https://api.weixin.qq.com/cgi-bin/token', {
+        params: {
+            appid: app_id,
+            secret: app_secret,
+            grant_type: 'client_credential'
+        }
+    })
+
+    console.log('result', result)
+
+    const res = await axios.post(`https://api.weixin.qq.com/wxa/business/getuserphonenumber?access_token=${result.data.access_token}`, {
+        code,
+    })
+    console.log(res)
+    ctx.body = 'hello world'
+})
+
+
 
 export  default  router

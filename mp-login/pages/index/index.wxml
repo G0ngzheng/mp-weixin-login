@@ -1,0 +1,3 @@
+<button type="primary" bindtap="handleTap">登录</button>
+<button type="primary" bindtap="handleReqTap">token请求</button>
+<button type="primary" open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">手机号快捷登录</button>
