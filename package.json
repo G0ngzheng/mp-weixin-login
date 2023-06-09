@@ -1,0 +1,23 @@
+{
+  "name": "mp-weixin-login",
+  "version": "1.0.0",
+  "description": "mp-weixin",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "serve": "nodemon ./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.0",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.0",
+    "koa-router": "^12.0.0",
+    "nodemon": "^2.0.22",
+    "request": "^2.88.2"
+  }
+}
