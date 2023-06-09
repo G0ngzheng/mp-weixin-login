@@ -1,11 +1,13 @@
 # mp-weixin-login
 mp-weixin
 
+![img_1.png](img_1.png)
+
 ## 使用 mp-weixin 结合 koa 实现小程序登录流程及 token 返回
 
 #### 安装依赖
 ```shell
-npm install
+npm install![img.png](img.png)
 ```
 
 #### 启动服务
